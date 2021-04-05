@@ -26,6 +26,8 @@ mongoose
   .catch((err) => console.log(`db disconnected`));
 
 // route middlewares
+app.get("/", (req, res) => res.send("Backend of Easy Buy"));
+
 readdirSync("./routes").map((r) => app.use("/api", require("./routes/" + r)));
 
 // port
