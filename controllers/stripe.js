@@ -1,7 +1,5 @@
 const User = require("../models/user");
 const Cart = require("../models/cart");
-const Product = require("../models/product");
-const Coupon = require("../models/coupon");
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
 exports.createPaymentIntent = async (req, res) => {
@@ -25,9 +23,11 @@ exports.createPaymentIntent = async (req, res) => {
     amount: finalAmount,
     currency: "inr",
   });
-  console.log(finalAmount);
+  let Client_Secret = paymentIntent.client_secret;
+  console.log(Client_Secret);
+  console.log("-----payment SECRET---->", paymentIntent);
   res.send({
-    clientSecret: paymentIntent.client_secret,
+    clientSecret: Client_Secret,
     cartTotal,
     totalAfterDiscount,
     payable: finalAmount,
