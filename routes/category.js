@@ -15,6 +15,7 @@ const {
   getSubs,
 } = require("../controllers/category");
 
+// category
 router.post("/category", authCheck, adminCheck, create);
 router.get("/categories", list);
 router.get("/category/:slug", read);

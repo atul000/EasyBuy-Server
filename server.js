@@ -14,7 +14,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.json({ limit: "2mb" }));
 app.use(cors());
 
-// db
+// database
 mongoose
   .connect(process.env.DATABASE, {
     useNewUrlParser: true,

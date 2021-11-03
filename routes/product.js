@@ -19,6 +19,7 @@ const {
   searchFilters,
 } = require("../controllers/product");
 
+// routes
 router.post("/product", authCheck, adminCheck, create);
 router.get("/products/total", productsCount);
 

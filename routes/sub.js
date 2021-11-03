@@ -7,6 +7,7 @@ const { authCheck, adminCheck } = require("../middlewares/auth");
 // controller
 const { create, read, update, remove, list } = require("../controllers/sub");
 
+// route
 router.post("/sub", authCheck, adminCheck, create);
 router.get("/subs", list);
 router.get("/sub/:slug", read);
