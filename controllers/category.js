@@ -3,6 +3,8 @@ const Product = require("../models/product");
 const Sub = require("../models/sub");
 const slugify = require("slugify");
 
+// methods
+
 exports.create = async (req, res) => {
   try {
     const { name } = req.body;

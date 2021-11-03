@@ -1,7 +1,7 @@
 const admin = require("firebase-admin");
 
 const serviceAccount = require("../config/fbServiceAccount.json");
-
+// firebase
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: "https://e-commerce-f6dad.firebaseio.com",

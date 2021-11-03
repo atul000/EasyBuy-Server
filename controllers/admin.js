@@ -1,5 +1,6 @@
 const Order = require("../models/order");
 
+// methods
 exports.orders = async (req, res) => {
   let allOrders = await Order.find({})
     .sort("-createdAt")

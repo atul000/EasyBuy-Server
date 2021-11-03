@@ -1,6 +1,9 @@
 const admin = require("../firebase");
 const User = require("../models/user");
 
+// methods
+
+
 exports.authCheck = async (req, res, next) => {
   try {
     const firebaseUser = await admin

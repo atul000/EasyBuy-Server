@@ -2,6 +2,8 @@ const Sub = require("../models/sub");
 const Product = require("../models/product");
 const slugify = require("slugify");
 
+// methods
+
 exports.create = async (req, res) => {
   try {
     const { name, parent } = req.body;

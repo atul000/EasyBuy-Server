@@ -2,6 +2,9 @@ const User = require("../models/user");
 const Cart = require("../models/cart");
 const stripe = require("stripe")(process.env.STRIPE_SECRET);
 
+// methods
+
+
 exports.createPaymentIntent = async (req, res) => {
   const { couponApplied } = req.body;
 

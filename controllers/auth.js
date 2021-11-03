@@ -1,5 +1,7 @@
 const User = require("../models/user");
 
+// methods
+
 exports.createOrUpdateUser = async (req, res) => {
   const { name, picture, email } = req.user;
 

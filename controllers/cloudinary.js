@@ -1,4 +1,6 @@
 const cloudinary = require("cloudinary").v2;
+// methods
+
 
 // cloudinary.config({
 //   cloud_name: "dyrannvyu",
